@@ -1,0 +1,15 @@
+{% extends '../base.html' %}
+
+{% block title %} <title>formation</title> {% endblock %}
+
+{% block content %}
+	<h1>Bienvenue sur ma formation {{b.title}} </h1>
+	<p><a href="{% url 'updateform' slug=b.slug %}"> Modifier</a></p>
+	<p><a href="{% url 'delete' slug=b.slug %}"> Supprimer</a></p>
+	<p>publier par : {{b.pub_or_no}} </p>
+	<p>
+		<img src="{{b.picture.url}}" alt="python">
+	</p>
+	<h3>Description</h3>
+	<p> {{b.content}} </p>
+{% endblock %}

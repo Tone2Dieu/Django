@@ -1,0 +1,17 @@
+{% extends '../base.html'%}
+
+
+{% block title %} <title>Delete formulaire</title> {% endblock %}
+
+{% block content %}
+
+	<form action="" method="post">
+
+		{% csrf_token %}
+
+		<p> Voulez-vous supprimer cette formation??: <h2>{{blogpost.title}} </h2> </p>
+		<input type="submit" value="supprimer">
+
+	</form>
+
+{% endblock %}

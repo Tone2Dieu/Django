@@ -1,0 +1,5 @@
+.idea/
+db.squilte3
+__pycache__/
+.env/
+.env

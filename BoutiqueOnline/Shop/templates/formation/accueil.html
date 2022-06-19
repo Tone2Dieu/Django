@@ -1,0 +1,15 @@
+{% extends '../base.html' %}
+
+{% block title %} <title>Accueil</title>{% endblock%}
+
+{% block content %}
+	<h1>Bienvenue sur mon site de formation</h1>
+	<h2> Mon site contient {{formations.count}} </h2>
+	<h3> Mes formations :</h3>
+	{% for formation in  formations %}
+		<a href="{% url 'formation' slug=formation.slug %}">
+			<h3> {{foorloop.counter}} {{formation.title}} </h3>
+		</a>
+		<p> {{formation.content|truncatewords:50}} </p>
+	{% endfor %}
+{% endblock%}
